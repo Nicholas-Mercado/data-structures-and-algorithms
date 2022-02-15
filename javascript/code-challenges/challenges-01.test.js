@@ -90,7 +90,7 @@ const addNumbers = (num, arr, times, addValues) => {
     addValues(arr,num); }
   return arr;
 };
-
+// Tanner,Brady,Matt Helped me with this challenge
 /* ------------------------------------------------------------------------------------------------
 
 CHALLENGE 6
@@ -117,6 +117,7 @@ const createList = (availableItems) => {
   });
   return finalArr;
 };
+// Tanner,Brady,Matt Helped me with this challenge
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
@@ -133,7 +134,7 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+// Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
