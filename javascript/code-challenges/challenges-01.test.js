@@ -10,8 +10,7 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 
 let arr2 = [];
 const addOne = (arr) => {
-  arr.forEach((arr) => {
-    arr2.push(arr+1);
+  arr.forEach((arr) => {arr2.push(arr+1);
   });
   return arr2;
 };
@@ -56,12 +55,14 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
 ------------------------------------------------------------------------------------------------ */
 
-const greeting = (word) => {
-  // Solution code here...
-};
+const greeting = word => {return word.toUpperCase() + '!';
 
+};
 const speaker = (words, callback) => {
-  // Solution code here...
+  let newArray = [];
+  words.forEach(words => newArray.push(callback(words)));
+  // Tanner Helped me with challenge 4
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,11 +82,13 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
-const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+const addNumbers = (num, arr, times, addValues) => {
+  for (let i = 0; i < times; i++) {
+    addValues(arr,num); }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
