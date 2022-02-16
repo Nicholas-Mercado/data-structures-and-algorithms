@@ -8,7 +8,7 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
+  for (let i in arr) {
     newArr.push(arr[i]+2);
   }
   return newArr;
@@ -21,9 +21,9 @@ Write a function named typeNum that, given an array as input, uses filter to ret
 
 For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
-
+// Matt showed me Number()
 const typeNum = (arr) => {
-  let newArr = arr.filter(value => value >=0 );
+  let newArr = arr.filter(Number);
   return newArr;
 };
 
