@@ -24,6 +24,7 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 // Matt showed me Number()
 const typeNum = (arr) => {
   let newArr = arr.filter(Number);
+  // Matt Rangel taught me Number
   return newArr;
 };
 
