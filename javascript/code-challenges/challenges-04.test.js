@@ -21,8 +21,8 @@ function lower(str) {
   return str.toLowerCase();
 }
 
-const updateAnimal = (arr, upper) => {
-  return arr.map(num => upper(num));
+const updateAnimal = (arr, callback) => {
+  return arr.map(num => callback(num));
 
 };
 
