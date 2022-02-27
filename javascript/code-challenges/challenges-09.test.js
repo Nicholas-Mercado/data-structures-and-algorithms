@@ -9,7 +9,7 @@ using the 'reduce' method.
 E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
-  // Solution code here...
+  return Math.max(...arr);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,7 +25,8 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 };
 
 const getCourseKeys = (obj) => {
-  // Solution code here...
+  let keysNames = Object.keys(obj);
+  return keysNames;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,7 +38,7 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  // Solution code here...
+  return Object.values(obj).includes(value);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,7 +61,7 @@ HR has asked you to change the data to make it easier to print so that it looks 
 ------------------------------------------------------------------------------------------------ */
 
 const updateNumbers = (obj) => {
-  // Solution code here...
+  return Object.entries(obj).map(objPairs => objPairs.join(': '));
 };
 
 
@@ -116,7 +117,9 @@ const characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  arr.forEach(x => {
+    houses.push(x.house);
+  });
   return houses;
 };
 
@@ -133,7 +136,17 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // very contrived
+  let kids = 0;
+  arr.forEach(person => {
+    if(person.name === character){
+      Object.keys(person).forEach((key,idx) => {
+        if(key === 'children') {
+          kids = Object.values(person)[idx].length;
+        }
+      });
+    }
+  });
+  return kids;
 
 };
 
