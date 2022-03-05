@@ -31,9 +31,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-
-// use filter!
-  return arr.map(x => x.includes(':)'));
+  return arr.filter(x => x.includes(':)'));
 };
 
 /* ------------------------------------------------------------------------------------------------
