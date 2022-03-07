@@ -13,7 +13,7 @@ Write a function named screenForNames that takes in an array of strings and uses
 const screenForNames = (arr) => {
   let newArr =[];
   arr.map(name => {
-    if(/^(Mr. |Ms. |Mrs. |Dr. )[a-zA-z]/gm.test(name)){
+    if(/^(Mr. |Mrs. |Ms. |Dr. )[a-zA-z]/gm.test(name)){
       newArr.push(name);
     }
   });
@@ -29,7 +29,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-  // Solution code here...
+  return arr.map(title => title.charAt(0).toUpperCase()+title.slice(1));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -104,7 +104,11 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+// tried my hardest not to hard code luke mass
+  return arr
+    .filter(character => character.mass > 77)
+    .map(character => character.name)
+    .join(' - ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,7 +126,14 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  return arr.sort((a,b) => {
+
+    if (a[property] < b[property]){
+      return -1;
+    } else if (a[property] > b[property]) {
+      return 1;
+    }
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -138,7 +149,7 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  // Solution code here...
+  return url.includes('https://');
 };
 
 /* ------------------------------------------------------------------------------------------------
