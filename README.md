@@ -28,3 +28,5 @@ To run your tests
 [reverse_array](python/reverse_array/README.md)
 
 [array-insert-shift](python/array_insert_shift/README.md)
+
+[array-binary-search](python/array_binary_search/README.md)
